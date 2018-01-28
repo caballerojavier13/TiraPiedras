@@ -1,0 +1,25 @@
+<%= form_for(@trivia_game) do |f| %>
+  <% if @trivia_game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trivia_game.errors.count, "error") %> prohibited this trivia_game from being saved:</h2>
+
+      <ul>
+      <% @trivia_game.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :punishment %><br>
+    <%= f.text_field :punishment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

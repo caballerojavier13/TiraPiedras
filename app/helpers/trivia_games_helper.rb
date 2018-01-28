@@ -1,0 +1,2 @@
+module TriviaGamesHelper
+end

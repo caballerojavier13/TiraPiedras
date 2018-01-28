@@ -1,0 +1,18 @@
+<%= form_for(@round) do |f| %>
+
+  <div class="form-group">
+    <label>Jugador 1:</label>
+    <%= f.text_field :player1, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <label>Jugador 2:</label>
+    <%= f.text_field :player2, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Guardar', class: 'btn btn-primary' %>
+
+    <%= link_to 'Atrás', root_path, class: 'btn btn-secondary' %>
+  </div>
+<% end %>

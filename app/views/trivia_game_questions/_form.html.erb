@@ -1,0 +1,29 @@
+<%= form_for(@trivia_game_question) do |f| %>
+  <% if @trivia_game_question.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@trivia_game_question.errors.count, "error") %> prohibited this trivia_game_question from being saved:</h2>
+
+      <ul>
+      <% @trivia_game_question.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :trivia_game %><br>
+    <%= f.collection_select :trivia_game_id, TriviaGame.all, :id, :title, {prompt: ' - Seleccione una Trivia - '}, {class: 'form-control', required: true} %>
+  </div>
+  <div class="field">
+    <%= f.label :question %><br>
+    <%= f.text_field :question %>
+  </div>
+  <div class="field">
+    <%= f.label :right %><br>
+    <%= f.check_box :right %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

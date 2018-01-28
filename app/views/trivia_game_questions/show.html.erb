@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Trivia game:</strong>
+  <%= @trivia_game_question.trivia_game.title %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @trivia_game_question.question %>
+</p>
+
+<p>
+  <strong>Right:</strong>
+  <%= @trivia_game_question.right %>
+</p>
+
+<%= link_to 'Edit', edit_trivia_game_question_path(@trivia_game_question) %> |
+<%= link_to 'Back', trivia_game_questions_path %>

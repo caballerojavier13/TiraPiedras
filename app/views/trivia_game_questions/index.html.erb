@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Trivia Game Questions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Trivia game</th>
+      <th>Question</th>
+      <th>Right</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @trivia_game_questions.each do |trivia_game_question| %>
+      <tr>
+        <td><%= trivia_game_question.trivia_game.title %></td>
+        <td><%= trivia_game_question.question %></td>
+        <td><%= trivia_game_question.right %></td>
+        <td><%= link_to 'Show', trivia_game_question %></td>
+        <td><%= link_to 'Edit', edit_trivia_game_question_path(trivia_game_question) %></td>
+        <td><%= link_to 'Destroy', trivia_game_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trivia game question', new_trivia_game_question_path %>
