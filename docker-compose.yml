@@ -1,17 +1,18 @@
-db:
-  image: postgres
-  ports:
-    - "5432"
-  environment:
-    POSTGRES_USER: javier
-    POSTGRES_PASSWORD: javier
-  restart: always
-web:
-  build: .
-  command: bundle exec rails s -p 3000 -b '0.0.0.0'
-  volumes:
-    - .:/helloapp
-  ports:
-    - "3000:3000"
-  links:
-    - db
+version: '2'
+  db:
+    image: postgres
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_USER: javier
+      POSTGRES_PASSWORD: javier
+    restart: always
+  web:
+    image: 'bitnami/rails:latest'
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    links:
+      - db
