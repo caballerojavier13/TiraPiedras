@@ -51,3 +51,5 @@ gem 'bootstrap', '~> 4.0.0'
 gem 'devise'
 
 gem 'rails_12factor', group: :production
+
+ruby '2.3.4'
