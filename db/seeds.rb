@@ -47,3 +47,10 @@ TriviaGameQuestion.create({question: 'Varsovia', right: false, trivia_game: triv
 TriviaGameQuestion.create({question: 'Dublín', right: false, trivia_game: trivia4})
 TriviaGameQuestion.create({question: 'Oslo', right: false, trivia_game: trivia4})
 TriviaGameQuestion.create({question: 'Budapest', right: true, trivia_game: trivia4})
+
+Punishment.create({name: 'El juegador pierde 2 turnos'})
+Punishment.create({name: 'El juegador pierde 1 turnos'})
+Punishment.create({name: 'El jugador retrocede 6 casilleros'})
+Punishment.create({name: 'El jugador retrocede 5 casilleros'})
+Punishment.create({name: 'El jugador retrocede 4 casilleros'})
+Punishment.create({name: 'El jugador retrocede 3 casilleros'})

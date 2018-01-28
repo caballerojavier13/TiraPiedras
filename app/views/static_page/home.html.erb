@@ -1,15 +1,17 @@
 <div class="text-center">
 
-<% if @round %>
+  <% if @round %>
 
-  <h1>¡Juega!</h1>
+    <h1>¡Juega!</h1>
 
-  <%= link_to 'Terminar Juego',  finish_current_game_path, method: :post, class: 'btn btn-primary btn-lg' %>
+    <h3><small><%= @round.player1 %> vs <%= @round.player2 %></small></h3>
 
-<% else %>
+    <%= link_to 'Terminar Juego',  finish_current_game_path, method: :post, class: 'btn btn-primary btn-lg' %>
 
-  <%= link_to 'Nueva Ronda', new_round_path, class: 'btn btn-primary btn-lg' %>
+  <% else %>
 
-<% end %>
+    <%= link_to 'Nueva Ronda', new_round_path, class: 'btn btn-primary btn-lg' %>
+
+  <% end %>
 
 </div>
