@@ -69,3 +69,11 @@
   padding: 20px;
   border-radius: 5px;
 }
+
+#card-loose, #card-win{
+  display: none;
+}
+
+.list-group-item{
+  cursor: pointer;
+}

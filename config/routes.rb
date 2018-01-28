@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :punishments
-  get 'mini_game/PlayTrivia'
+
+  get 'mini_game/play_trivia' => 'mini_game#PlayTrivia'
+  get 'mini_game/play_dices' => 'mini_game#PlayDices'
 
   resources :trivia_game_questions
   resources :trivia_games
